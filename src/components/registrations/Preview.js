@@ -1,6 +1,8 @@
 import React from 'react'
 import axios from '../../config/axios'
 
+import '../../styles/Registration.css'
+
 export default class PreviewComp extends React.Component{
     constructor(props){
         super(props)
@@ -68,24 +70,24 @@ export default class PreviewComp extends React.Component{
     render(){
         if (this.state.registered) {
             return (
-                <div>
-                    <h3>You have successfully registered for the event</h3>
-                    <p>Your Registration Id is {this.state.registrationId}</p>
-                    <p>Total Cost is {this.state.totalCost}</p>
+                <div className="registerform">
+                    <h2>You have successfully registered for the event</h2>
+                    <p>Your Registration Id is : &nbsp; {this.state.registrationId} &nbsp;</p>
+                    <p>Total Cost is : &nbsp; {this.state.totalCost}/- Rs &nbsp;</p>
                 </div>
             )
         }
         else {
             return(
-                <div>
-                <h3>Here is a Preview of your input for verification</h3>
-                <p>Your Full Name is {this.props.previewData.fullName}</p>
-                <p>Your Mobile Number is {this.props.previewData.mobile}</p>
-                <p>Your Email Id is {this.props.previewData.email}</p>
-                <p>Your Card No is {this.props.previewData.cardNo}</p>
-                <p>Registration Type selected is {this.props.previewData.registrationType}</p>
-                <p>Number of Tickets is {this.props.previewData.noOfTickets}</p>
-                <button onClick={this.handleSubmit}>Submit</button>
+                <div className="registerform">
+                <h2>Here is a Preview of your input for verification</h2>
+                <p>Your Full Name is : &nbsp; {this.props.previewData.fullName}&nbsp;</p>
+                <p>Your Mobile Number is : &nbsp;  {this.props.previewData.mobile}&nbsp;</p>
+                <p>Your Email Id is : &nbsp;  {this.props.previewData.email}&nbsp;</p>
+                <p>Your Card No is : &nbsp;  {this.props.previewData.cardNo}&nbsp;</p>
+                <p>Registration Type selected is : &nbsp;  {this.props.previewData.registrationType}&nbsp;</p>
+                <p>Number of Tickets is : &nbsp;  {this.props.previewData.noOfTickets}&nbsp;</p>
+                <button onClick={this.handleSubmit} className="submitbtn">Submit</button>
             </div>
             )
         }

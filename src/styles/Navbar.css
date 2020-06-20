@@ -1,0 +1,17 @@
+.navbar{
+    height:50px;
+    background-color:black;
+}
+.link1,.link2,.link3{
+    margin:20px; 
+    /*padding-top:5px;*/
+    display:inline-block;
+    color:white;
+    font-weight:bold;
+    
+}
+.link1:hover,.link2:hover,.link3:hover{
+
+    /* border-bottom: 5px solid red; */
+    color:pink;
+}

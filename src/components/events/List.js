@@ -25,13 +25,13 @@ export default class EventList extends React.Component{
     render(){
         return(
             <div>
-            <h2>Upcoming Events</h2>
+            <h2>~~~Upcoming Events~~~</h2>
             <div className="row">
             { this.state.events.map((event,id)=>{
                 return(
                         <div className="column" key={id}>
                             <div className="card">
-                                <h3><Link to={`/events/${event._id}`}>{event.eventName}</Link></h3>
+                                <h3><Link className="links" to={`/events/${event._id}`}>{event.eventName}</Link></h3>
                                 <p>Date : {event.eventDate}</p>
                             </div>
                         </div>

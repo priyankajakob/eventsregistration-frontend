@@ -16,13 +16,14 @@
   /* Remove extra left and right margins, due to padding */
   .row {
     margin: 0 -5px;
-    ;}
+    }
   
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
+    margin:2px;
   }
   
   /* Responsive columns */
@@ -37,7 +38,30 @@
   /* Style the counter cards */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
+    /* padding: 15px; */
+    margin:auto;
+    padding:auto;
+    height:90px;
+    font-weight: bolder;
     text-align: center;
-    background-color: #f1f1f1;
+    background-color:lightpink;
+  }
+  h2{
+    color:purple;
+    font-size:40px;
+  }
+  .links{
+    color:purple;
+    font-weight: bolder;
+    font-family:'cursive';
+  }
+  .detailsshow{
+    margin:30px;
+    font-style:italic;
+    font-family:'cursive';
+    color:purple;
+    font-size:30px;
+  }
+  .showpagediv{
+    text-align:center;
   }

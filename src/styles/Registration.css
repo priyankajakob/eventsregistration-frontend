@@ -1,0 +1,35 @@
+h2{
+    color:purple;
+    font-family:'cursive';
+    font-style:bolder;
+  }
+  .registerform{
+    /* justify-content:right; */
+    font-style:italic;
+    font-family:'cursive';
+    color:purple;
+  }
+  .registerpagediv{
+    text-align:left;
+    margin:30px;
+  }
+  .submitbtn{
+    color:white;
+    background-color: purple;
+    font-family:'sans-serif';
+    font-style:bolder;
+    font-size:18px;
+    border:solid;
+    /* border-color:purple; */
+    height:30px;
+    width:100px;
+    border-radius: 4px;
+    text-transform:uppercase;
+  }
+  .submitbtn:hover{
+    color: purple;
+    text-decoration: none;
+    background: #fff;
+    /* border-color: purple */
+  }
+  

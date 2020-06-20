@@ -2,6 +2,8 @@ import React from 'react'
 import moment from 'moment'
 import PreviewComp from '../registrations/Preview'
 
+import '../../styles/Registration.css'
+
 export default class Register extends React.Component {
     constructor(props) {
         super(props)
@@ -166,9 +168,9 @@ export default class Register extends React.Component {
         }
         else {
             return (
-                <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <h3>Registering for the event</h3>
+                <div className="registerpagediv">
+                    <h2>Stay here and register!</h2>
+                    <form className="registerform"onSubmit={this.handleSubmit}>
                         {this.state.errors?(
                         <div>
                             <div style={{color:"red"}}>
@@ -178,30 +180,30 @@ export default class Register extends React.Component {
                         </div>
                         
                         ):""}
-                        <label htmlFor="fullName">Your Full Name</label>
+                        <label htmlFor="fullName">Your Full Name : &nbsp;</label>
                         <input type="text" id="fullName" name="fullName" value={this.state.fullName} onChange={this.handleChange} required/>
-                        <br />
-                        <label htmlFor="mobile">Your Mobile Number</label>
+                        <br /><br/>
+                        <label htmlFor="mobile">Your Mobile Number : &nbsp;</label>
                         <input type="text" id="mobile" name="mobile" value={this.state.mobile} onChange={this.handleChange} required/>
-                        <br />
-                        <label htmlFor="email">Your Email Id</label>
+                        <br /><br/>
+                        <label htmlFor="email">Your Email Id : &nbsp;</label>
                         <input type="text" id="email" name="email" value={this.state.email} onChange={this.handleChange} required/>
-                        <br />
-                        <label htmlFor="password">Input a Password</label>
+                        <br /><br/>
+                        <label htmlFor="password">Input a Password : &nbsp;</label>
                         <input type="password" id="password" name="password" value={this.state.password} onChange={this.handleChange} required />
-                        <br />
-                        <label htmlFor="cardNo">Valid Id Card Number</label>
+                        <br /><br/>
+                        <label htmlFor="cardNo">Valid Id Card Number : &nbsp;</label>
                         <input type="text" id="cardNo" name="cardNo" value={this.state.cardNo} onChange={this.handleChange} required/>
-                        <br />
-                        <label htmlFor="registrationType">Registation Type</label>
+                        <br /><br/>
+                        <label htmlFor="registrationType">Registation Type : &nbsp;</label>
                         <select name="registrationType" id="registrationType" onChange={this.handleChange}>
                             <option value="Self">Self</option>
                             <option value="Group">Group</option>
                             <option value="Corporate">Corporate</option>
                             <option value="Others">Others</option>
                         </select>
-                        <br />
-                        <label htmlFor="noOfTickets">How Many Tickets You Need?</label>
+                        <br /><br/>
+                        <label htmlFor="noOfTickets">How Many Tickets You Need? : &nbsp;</label>
                         <select name="noOfTickets" id="noOfTickets" onChange={this.handleChange}>
                             {this.state.allowedTickets.map((ele, index) => {
                                 return (
@@ -209,11 +211,11 @@ export default class Register extends React.Component {
                                 )
                             })}
                         </select>
-                        <br />
-                        <label htmlFor="noOfTickets">Registration Name/Passphrase?</label>
+                        <br /><br/>
+                        <label htmlFor="noOfTickets">Registration Name/Passphrase? : &nbsp;</label>
                         <input type="text" name="registrationName" value={this.state.registrationName} onChange={this.handleChange} />
-                        <br />
-                        <input type="submit" text="Submit"/>
+                        <br /><br/>
+                        <input type="submit" text="SUBMIT" className="submitbtn"/>
                     </form>
                     {/* <button onClick={this.handlepreviewClicked}>Preview</button> */}
                 </div>
